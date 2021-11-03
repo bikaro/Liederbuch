@@ -1,5 +1,4 @@
-\documentclass[a6paper,
-              paper=landscape,
+\documentclass[a5paper,
               12pt,
               pagesize,
               typearea,
@@ -15,7 +14,7 @@
               
 
 %Zusätzliche Beschnittzugabe zum DinA6 Format dazu
-\usepackage[cam, noinfo, width=15.4truecm,height=11.1truecm, center]{crop}
+\usepackage[cam, noinfo, width=15.4truecm,height=21.6truecm, center]{crop}
 
 %Überschriftenabstände
 \usepackage{titlesec}
@@ -38,10 +37,13 @@
 %PDF-Dateien einbinden 
 \usepackage{pdfpages}
 
+%Musiknoten schreiben
+\usepackage[generate,ps2eps]{abc}
+
 %Layoutgeraffel
 %may the latex masters be gentle and hope that they won't take this clusterf**k personal - but it works
 %setting up the layout spacing 
-\areaset[10mm]{130 mm}{82 mm}
+\areaset[10mm]{130 mm}{187 mm}
 \topmargin=-21.4mm 
 \headheight=5.5mm
 \headsep=2.5mm
@@ -103,7 +105,7 @@
   
 
     %Cover 
-    \includepdf[scale=1.1]{bilder/klappentext_modern.pdf}
+    \includepdf[scale=2.1]{bilder/klappentext_modern.pdf}
     %leerer Klappentext
     \cleardoublepage
     
@@ -120,7 +122,7 @@
 
       \newpage
 
-    %Das Inhaltsverzeichnis  
+    %Das Inhaltsverzeichnis
     \tableofcontents
     \newpage
  
@@ -130,8 +132,9 @@
     \fancyhf{}
     \pagestyle{fancy}
     
-    % Dieses Template enhält nur ein einziges Lied. Wegen Liedrechten und solchen Dingen
-    \include{lieder/Die-Gedanken-sind-frei}
+    % Dieses Template enhält nur zwei Lieder. Wegen Liedrechten und solchen Dingen
+    \include{lieder/Die-Gedanken-sind-frei} % Beispiel Gitarren Akkorden
+    \include{lieder/Die-Internationale} % Beispiel mit Noten
     
 
     \pagestyle{empty}
@@ -146,7 +149,7 @@
     %Leerer hinterer Klappentext
     \cleardoublepage
     %Letzte Seite
-    \includepdf[scale=1.1]{bilder/klappentext_modern.pdf}
+    \includepdf[scale=2.1]{bilder/klappentext_modern.pdf}
     
 \end{document}
 

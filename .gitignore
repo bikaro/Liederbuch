@@ -225,3 +225,12 @@ TSWLatexianTemp*
 # ignore swap files
 *.swp
 
+# ignore files created by abc and abcm2ps
+# Not very elegant as it just ignores all file types.
+*.abc
+*.eps
+*.ps
+*.svg
+*.pdf
+!Liederbuch.pdf
+
