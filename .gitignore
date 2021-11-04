@@ -6,7 +6,7 @@
 *.fls
 *.out
 *.toc
-*.fmt
+*.fmt 
 *.fot
 *.cb
 *.cb2
@@ -227,10 +227,13 @@ TSWLatexianTemp*
 
 # ignore files created by abc and abcm2ps
 # Not very elegant as it just ignores all file types.
-*.abc
-*.eps
-*.ps
-*.svg
-*.pdf
+/*.abc
+/*.eps
+/*.ps
+/*.svg
+/*.pdf
 !Liederbuch.pdf
+
+# *.fmt is ignored for some reason. This file is needed so I made an exeption.
+!default.fmt
 

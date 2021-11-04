@@ -174,7 +174,7 @@ Introtext, geklimper und andere musikalischen Dinge
 * Wenn die erste Strophe bereitsmit Noten geschrieben wurde, kann mit
 `\setcounter` der Zähler von `enumerate` gesetzt werden:
 
-```tes
+```tex
 \begin{enumerate}
 \setcounter{enumi}{2} % begin bei 2. Strophe
     \item Hier die 2te und folgende Strophen.
@@ -195,7 +195,7 @@ Introtext, geklimper und andere musikalischen Dinge
 
 ## Compile
 
-Zusätzlich zu LaTeX wird zum compilen das Packet `abcm2ps` benötigt, welches
+Zusätzlich zu LaTeX wird zum kompelieren das Packet `abcm2ps` benötigt, welches
 für die Erzeugung der Musiknoten übernimmt.
 Für Ubuntu kann es aus den offizielen Packetquellen instaliert werden.
 

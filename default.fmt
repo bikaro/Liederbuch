@@ -1,0 +1,12 @@
+%
+% This is a format file, used by abcm2ps for all music sheets in the songbook.
+%
+
+% make it bigger
+% pagescale 1.0
+% Increased font size instead
+
+% add font and set it to default for lyrics
+% font        AlegreyaSans-Regular % This is the font used otherwise, but results here are very bad
+vocalfont   DejaVuSans 15  % Helvetica
+
