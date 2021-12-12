@@ -16,6 +16,7 @@ Ebenso wurde das Format angepasst.
 * **Auf der nächsten Seite geht es weiter Symbol** - Unerfahrenen Sängern kann es passieren, dass Sie nicht merken, das ein Lied eigentlich noch weitergeht. Einfach weil sich ein Zeilenumbruch eingeschlichen hat. EIn kleines Symbol am Ende einer Seite hilft hier weiter.
 * **Jederzeit den Titel und Interpreten sehen** - Titel und Interpret findest du auf jeder Seite in der Kopfzeile. So findest du beim Durchblättern noch schneller das richtige Lied.
 * **Musik Noten** - Die modifizierte version unterstützt nun auch das schreiben vom Musiknoten.
+* **Infoboxen** - Nun können auch einfach Infoboxen zu den Liedern hinzugefügt werden.
 ## Projektaufbau
 
 ### Liederbuch.tex
@@ -192,6 +193,15 @@ Introtext, geklimper und andere musikalischen Dinge
 ```
 
 * Optional kann noch ein Bild eingebunden werden. Hierbei ist zu beachten, dass Bilder nicht in der `guitarMagic`- oder `abc`-Umgebung verwendet werden können.
+
+### Infoboxen eingügen
+
+```tex
+% Infoboxen können nicht in der guitarmagic oder abc Umgebung eingefügt werden. Das muss davor oder danahc geschehen.
+\notebox{Beispieltext}
+```
+
+* Optional kann eine Infobox eingefügt werden mit Hintergrundwissen zu dem Lied o.ä.
 
 ## Compile
 

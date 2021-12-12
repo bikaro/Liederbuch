@@ -41,6 +41,15 @@
 %Musiknoten schreiben
 \usepackage[generate,ps2eps]{abc}
 
+%infoboxen
+\usepackage{awesomebox}
+%set all box colours to bw
+\definecolor{abnote}{RGB}{0,0,0}
+\definecolor{abcaution}{RGB}{0,0,0}
+\definecolor{abwarning}{RGB}{0,0,0}
+\definecolor{abimportant}{RGB}{0,0,0}
+\definecolor{abvrulecolor}{RGB}{0,0,0}
+
 %Layoutgeraffel
 %may the latex masters be gentle and hope that they won't take this clusterf**k personal - but it works
 %setting up the layout spacing 
@@ -136,6 +145,8 @@
     % Dieses Template enhält nur zwei Lieder. Wegen Liedrechten und solchen Dingen
     \include{lieder/Die-Gedanken-sind-frei} % Beispiel Gitarren Akkorden
     \include{lieder/Die-Internationale} % Beispiel mit Noten
+    %\include{lieder/Roter-Mond}
+    %\include{lieder/Lady-in-Black}
     
 
     \pagestyle{empty}
