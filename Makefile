@@ -3,7 +3,6 @@ SHELL=/bin/bash -O extglob -c
 all:
 	python collectsongs.py
 	pdflatex -shell-escape Liederbuch.tex
-	makeindex Liederbuch.idx -s indexstyle.ist
 	pdflatex -shell-escape Liederbuch.tex
 
 view:

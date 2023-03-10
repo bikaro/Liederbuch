@@ -6,7 +6,7 @@ Dieses Template ist im Rahmen der Jugendarbeit des Arbeitskreises Roverstufe des
 Viele Stunden sind in das zusammenfrickeln eines ansehbaren LateX-Templates geflossen. Es wäre schade, wenn nicht noch jemand anderes dieses nutzen könnte. Wenn dir auffällt, dass wir etwas hätten besser lösen können, freuen wir uns über deinen Input.
 
 Dies ist eine Modifizierte Version, welche nicht nur das einbinden von
-Gitaren-Akkorde sondern ebenso das schreiben von Musiknoten unterstützt.
+Gitarren-Akkorde sondern ebenso das schreiben von Musiknoten unterstützt.
 Ebenso wurde das Format angepasst.
 
 ## Features
@@ -14,9 +14,9 @@ Ebenso wurde das Format angepasst.
 * **Inhaltsverzeichnis**
 * **Kuraten Verzeichnis** - Das Kuratenverzeichnis ist ein zweites Inhaltsverzeichnis am Ende des Liederbuch. Hier können alle geistlichen Lieder aufgelistet werden, damit sie vor einer Morgenrunde/Gottesdienst/Impuls schneller gefunden werden.
 * **Verweise** - Lieder können auf ihr vorkommen in anderen Liederbüchern verweisen. So kann auch mit einem gemischten Bestand an Liederbüchern gemütlich gesungen werden.
-* **Auf der nächsten Seite geht es weiter Symbol** - Unerfahrenen Sängern kann es passieren, dass Sie nicht merken, das ein Lied eigentlich noch weitergeht. Einfach weil sich ein Zeilenumbruch eingeschlichen hat. EIn kleines Symbol am Ende einer Seite hilft hier weiter.
+* **Auf der nächsten Seite geht es weiter Symbol** - Unerfahrenen Sängern kann es passieren, dass Sie nicht merken, das ein Lied eigentlich noch weitergeht. Einfach weil sich ein Zeilenumbruch eingeschlichen hat. Ein kleines Symbol am Ende einer Seite hilft hier weiter.
 * **Jederzeit den Titel und Interpreten sehen** - Titel und Interpret findest du auf jeder Seite in der Kopfzeile. So findest du beim Durchblättern noch schneller das richtige Lied.
-* **Musik Noten** - Die modifizierte version unterstützt nun auch das schreiben vom Musiknoten.
+* **Musik Noten** - Die modifizierte Version unterstützt nun auch das schreiben vom Musiknoten.
 * **Infoboxen** - Nun können auch einfach Infoboxen zu den Liedern hinzugefügt werden.
 ## Projektaufbau
 
@@ -65,7 +65,7 @@ Eine Lieddatei beginnt immer mit folgenden Header:
 \begin{abc}[name=DieInternationale,program={abcm2ps -O= --pagescale 1.1}]
 ```
 
-* `abc` setzt mind. die Tags `X:` und `K: ` voraus, weitere Tags können angegeben werden.
+* `abc` setzt mindestens die Tags `X:` und `K: ` voraus, weitere Tags können angegeben werden.
 * Titel, Artist u.ä. sollten hier nicht nochmal angegeben werden, da sie sonst doppelt erscheinen.
 
 ```tex
@@ -74,7 +74,7 @@ M: C % Takt
 K: G % Tonart
 ```
 
-* Nun kann mit dem Notenschreiben begonnen werden. Dazu wird die "abc 2 music notation language" vewendet. Wie diese genau definiert ist kannst du im Internet nachlesen.
+* Nun kann mit dem Notenschreiben begonnen werden. Dazu wird die "abc 2 music notation language" verwendet. Wie diese genau definiert ist kannst du im Internet nachlesen.
 
 ```tex
 D2 | G3 F A G D B, | E4 C2 E2 | A3 G F E D C | B,4 z2 D |
@@ -93,7 +93,7 @@ w: Recht wie Glut im Kra- ter- her- de
 ```
 
 * Wenn die Noten auf zwei oder mehrere Seiten verteilt werden sollen müssen
-diese in zwei oder mehr `abc`-blocks aufgeteilt werden. Dazwischen wird mit dem
+diese in zwei oder mehr `abc`-Blocks aufgeteilt werden. Dazwischen wird mit dem
 Befehl `\liedweiter` der Seitenumbruch eingefügt. 
 
 ```tex
@@ -115,7 +115,7 @@ c B A G F E D C |]
 
 ### ohne Noten (`guitareMagic`)
 
-* Liedtext ohne Noten begint mit `\begin{guitarMagic}`.
+* Liedtext ohne Noten beginnt mit `\begin{guitarMagic}`.
 
 ```tex
 \begin{guitarMagic}
@@ -165,7 +165,7 @@ Introtext, geklimper und andere musikalischen Dinge
 
 ```
 
-* Gitarrenakkorde werden mit dem `Guitar`-Package gesetzt. Wie das geht darfst du selber nachlesen.
+* Gitarrenakkorde werden mit dem `Guitar`-Paket gesetzt. Wie das geht darfst du selber nachlesen.
 
 ```tex
 \end{guitarMagic}
@@ -173,7 +173,7 @@ Introtext, geklimper und andere musikalischen Dinge
 
 * Ein Lied endet mit dem `\end{guitarMagic}`-Befehl.
 
-* Wenn die erste Strophe bereitsmit Noten geschrieben wurde, kann mit
+* Wenn die erste Strophe bereits mit Noten geschrieben wurde, kann mit
 `\setcounter` der Zähler von `enumerate` gesetzt werden:
 
 ```tex
@@ -195,18 +195,37 @@ Introtext, geklimper und andere musikalischen Dinge
 
 * Optional kann noch ein Bild eingebunden werden. Hierbei ist zu beachten, dass Bilder nicht in der `guitarMagic`- oder `abc`-Umgebung verwendet werden können.
 
-### Infoboxen eingügen
+### Infoboxen einfügen
 
 ```tex
-% Infoboxen können nicht in der guitarmagic oder abc Umgebung eingefügt werden. Das muss davor oder danahc geschehen.
+% Infoboxen können nicht in der guitarmagic oder abc Umgebung eingefügt werden. Das muss davor oder danchh geschehen.
 \notebox{Beispieltext}
 ```
 
 * Optional kann eine Infobox eingefügt werden mit Hintergrundwissen zu dem Lied o.ä.
 
-## Compile
+## Compilieren
 
-Zusätzlich zu LaTeX wird zum kompelieren das Packet `abcm2ps` benötigt, welches
+Zusätzlich zu LaTeX wird zum compilieren das Paket `abcm2ps` benötigt, welches
 für die Erzeugung der Musiknoten übernimmt.
-Für Ubuntu kann es aus den offizielen Packetquellen instaliert werden.
+Für Ubuntu kann es aus den offiziellen Paketquellen installiert werden.
 
+Benutze beim compilieren mit die `-shell-escape` Option:
+```
+pdflatex -shell-escape Liederbuch.tex
+```
+
+oder nutze direkt das Makefile mit `make all`. 
+
+## Problembehebung
+
+> "! LaTeX Error: File `liederliste.tex' not found."
+
+This might happen if you do not use the makefile. To fix it, generate the file by running `collectsongs.py`:
+
+```
+python collectsongs.py
+```
+
+This will generate the file including all `.tex` files in the `lieder`-folder in alphabetic order.
+You can create the file manualy if you prefer a different order.
